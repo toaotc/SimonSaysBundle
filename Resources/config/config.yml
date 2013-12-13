@@ -1,0 +1,3 @@
+imports:
+    - { resource: "@ToaSimonSaysBundle/Resources/config/catalogues/senseless.yml" }
+    - { resource: "@ToaSimonSaysBundle/Resources/config/catalogues/default.yml" }

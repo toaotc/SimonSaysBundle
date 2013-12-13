@@ -1,0 +1,4 @@
+toa_simon_says:
+    catalogues:
+        default:
+            - "Don't repeat yourself."

@@ -1,0 +1,27 @@
+{% extends 'WebProfilerBundle:Profiler:layout.html.twig' %}
+
+{% block toolbar %}
+    {% set icon %}
+        <span>
+            <img width="22" height="28" alt="Simon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAA4CAYAAACc//oCAAACe0lEQVRYhe3XOWsVYRTG8Z8JCCoREQVjLCLYuUURbERtDYqFRRpF/AD6FRItFOzEJYWF2IpdXLBQREsVbMVGicQF0SwkGojEYt6Jk8k7M/dmLZw/HC4z85zznJl3uTPU1NTU/O+salC3Ft04hPYQW8IvfMnEZ7zEQ0wstMFTuI9xTDcZ47iHk/Mx3orH8zAtiofoaNS8Gz8X0TyNnzheZX5QMm6LbZ7GRPCI0oFvS2iexlfJEM+hfxnM07iVN9+GyWVsYDJ4agkN9GB17LEsEauD50wD3ctonnIsezBs+R5/GsMkW3EbRpfoLqvY0BIaWCnaWjCG3ytgPomxtIGbK9BAP0bSg02SeZCfKM/QlUtch8sR7ZVwLUtXqJHXjmJzvqOrEWHePGVPRLunQNsV0V5NL7ZkhC8iyW8Liu6PnNtXoI3ViHlpN7fTIp5EtE9K9Hlte5FwSPUQHMZUpOgUjkT0e3O6oZJGDeTE2UnYhtOS976i3e0rzvi3t+zF05xmoKyBvpLisRjR/DbelzXMTkJ4XdZdju/YhZ2SF5lGKfWITcSi6MnknWoir3ACpuzAeTxS/H4YW1pvCrQTodb5UHsWVR8ma3AUl3Agc34Yd/z7F12Pc9iQ0bxCL57jV4VPJbvFl15RTIWceXPc3Bl7o4kGbmTy+sK56DdB0RC04oPkxfFiKLIRFxpofhrX8SPk9eITOvGngfwZehWs3Qbpy+T3ziPfNrPHvZkmsuZToVaUqlUwYPbY3ZUMTRmdOJs5foATFTmFpJNxIVH5QVpGKwYXYD4YapQalDGN9yG2m73RlPER13Ab7xrMqaRTMv5Vd/0haGtqampqGuIvNy7ORW8fuhgAAAAASUVORK5CYII=" />
+            <span class="sf-toolbar-status sf-toolbar-info-piece-additional">{{ collector.saying|trans({}, 'ToaSimonSays' ~ collector.catalogue) }}</span>
+        </span>
+    {% endset %}
+
+    {% set text %}
+        <div class="sf-toolbar-info-piece">
+            <b>{{ 'Simon says'|trans({}, 'ToaSimonSays') }}</b>
+            {{ collector.saying|trans({}, 'ToaSimonSays' ~ collector.catalogue) }}
+        </div>
+        <div class="sf-toolbar-info-piece">
+            <b></b>
+            <span>
+                Skull icon by<br />
+                <a href="http://glyphicons.com/" target="_blank">GLYPHICONS.com</a><br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+            </span>
+        </div>
+    {% endset %}
+
+    {% include 'WebProfilerBundle:Profiler:toolbar_item.html.twig' with { 'link': false } %}
+{% endblock %}
